@@ -1,0 +1,12 @@
+TEMPLATE FOTO MENTOR
+
+Simpan 4 foto di folder ini dengan nama persis:
+  pemula-pria.jpg
+  pemula-wanita.jpg
+  menengah-pria.jpg
+  menengah-wanita.jpg
+
+Saran: rasio potret 4:5 (contoh 800 x 1000 px), wajah di tengah atas, di bawah 300 KB.
+Nama mentor diisi di src/data/mentors.js pada field "name" (kosong = tampil sebagai "Mentor Pemula Pria" dst).
+Format lain (png/webp)? Ubah field "photo" pada mentor yang bersangkutan.
+Selama foto belum ada, aplikasi menampilkan kotak placeholder bertuliskan "Foto mentor belum dipasang".

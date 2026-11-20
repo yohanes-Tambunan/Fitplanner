@@ -1,0 +1,67 @@
+/*
+  Gerak (R-19): setiap animasi punya tujuan.
+  - Tombol: bergeser kecil saat disentuh kursor, menekan saat ditekan, gelombang dari titik sentuh (memastikan penekanan terdaftar).
+  - Dialog dan notifikasi: masuk dan keluar, supaya perubahan layar terasa sebagai akibat dari tindakan.
+  - Halaman: masuk singkat saat berpindah rute.
+  - Kartu dihapus: menyusut sebelum hilang.
+  Durasi 120 sampai 220 ms. Semua dimatikan bila pengguna memilih prefers-reduced-motion.
+*/
+
+/* ---------- Tombol: sebelum ditekan (hover), saat ditekan (active), sesudah (gelombang) ---------- */
+.button, .icon-button, .filter-chip, .text-button, .text-action,
+.onboard-choice, .onboard-level, .frequency-option, .mentor-switch button {
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--press) var(--ease-out), background-color .16s ease, border-color .16s ease, color .16s ease;
+}
+.button:hover:not(:disabled), .icon-button:hover:not(:disabled) { transform: translateY(-1px); }
+.button:active:not(:disabled), .icon-button:active:not(:disabled), .filter-chip:active, .onboard-choice:active,
+.onboard-level:active, .frequency-option:active, .mentor-switch button:active, .text-action:active:not(:disabled) { transform: scale(.96); }
+.text-button:active { transform: scale(.97); }
+.press-wave { position: absolute; border-radius: 50%; background: currentColor; opacity: .22; pointer-events: none; transform: scale(0); animation: press-wave .5s ease-out forwards; }
+@keyframes press-wave { to { transform: scale(1); opacity: 0; } }
+
+.filter-chip.active { animation: chip-pop .2s var(--ease-out); }
+@keyframes chip-pop { 0% { transform: scale(.94); } 60% { transform: scale(1.04); } 100% { transform: scale(1); } }
+
+/* ---------- Kartu ---------- */
+.workout-card, .exercise-card { transition: border-color .18s ease, transform .18s var(--ease-out); }
+.exercise-card:active { transform: scale(.985); }
+.workout-card.is-leaving { opacity: 0; transform: scale(.96); transition: opacity 200ms ease, transform 200ms ease; pointer-events: none; }
+
+/* ---------- Foto: kerangka berdenyut saat memuat ---------- */
+.exercise-media-skeleton { animation: skeleton-slide 1.4s linear infinite; }
+@keyframes skeleton-slide { to { background-position: -200% 0; } }
+
+/* ---------- Dialog ---------- */
+.modal-backdrop { animation: fade-in var(--enter) ease; }
+.modal-panel { animation: modal-in var(--enter) var(--ease-out); }
+.modal-backdrop.is-closing { animation: fade-out var(--leave) ease forwards; }
+.modal-backdrop.is-closing .modal-panel { animation: modal-out var(--leave) ease forwards; }
+@keyframes fade-out { to { opacity: 0; } }
+@keyframes modal-out { to { opacity: 0; transform: translateY(.5rem) scale(.98); } }
+
+/* ---------- Notifikasi ---------- */
+.toast { animation: toast-in var(--enter) var(--ease-out); }
+.toast.is-leaving { animation: toast-out 250ms ease forwards; }
+@keyframes toast-out { to { opacity: 0; transform: translateY(.5rem); } }
+
+/* ---------- Perpindahan halaman ---------- */
+.page-transition { animation: page-in .24s var(--ease-out); }
+@keyframes page-in { from { opacity: 0; transform: translateY(.5rem); } to { opacity: 1; transform: none; } }
+
+/* ---------- Grafik dan status ---------- */
+.chart-bar { transform-origin: bottom; animation: bar-grow .5s var(--ease-out) backwards; }
+@keyframes bar-grow { from { transform: scaleY(0); } }
+.completed-tag { animation: chip-pop .25s var(--ease-out); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .press-wave { display: none; }
+  .exercise-media-skeleton { animation: none; }
+}

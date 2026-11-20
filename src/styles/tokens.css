@@ -1,0 +1,28 @@
+/*
+  Ukuran dasar yang mengikuti jendela (alasan: tampilan harus ikut membesar di layar lebar, bukan tetap kecil).
+  Seluruh stylesheet memakai rem, sehingga sidebar, logo, teks, dan kartu membesar bersama.
+  15px di layar ponsel, sekitar 16.5px di 1440px, 22px di layar sangat lebar.
+*/
+html { font-size: clamp(15px, 0.35vw + 11.5px, 22px); }
+
+:root {
+  /* Palet inti: hijau hutan gelap + satu aksen lime (referensi: Refero "Wise", dipakai sebagai arah, bukan salinan). */
+  --bg: #0d110e;
+  --panel: #141a15;
+  --panel-2: #1a221b;
+  --panel-3: #212b22;
+  --line: #2a352c;
+  --line-soft: #202a22;
+  --text: #eef2ec;
+  --muted: #aab5aa;
+  --muted-2: #8e9b8e;
+  --lime: #d5d731;
+  --lime-dark: #aeb02a;
+  --danger: #ef8a8a;
+  --radius: 0.875rem;
+  --shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, .28);
+  --ease-out: cubic-bezier(.2, .7, .2, 1);
+  --press: 120ms;
+  --enter: 220ms;
+  --leave: 160ms;
+}

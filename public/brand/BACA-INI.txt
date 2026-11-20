@@ -1,0 +1,9 @@
+LOGO FITPLANNER (THOR)
+
+File logo.png sudah terpasang: PNG transparan, 1396 x 1040 px, warna kuning-lime.
+Ukuran tampil diatur oleh CSS (src/styles/components.css, kelas .brand-logo-*) dan ikut membesar
+saat jendela browser dilebarkan. Tidak perlu mengubah ukuran file untuk mengubah ukuran tampil.
+
+Mengganti logo: timpa logo.png dengan file baru berbanding sama (landscape). Jika rasio berubah,
+sesuaikan width/height di src/config/brand.js.
+Jika file tidak ditemukan, aplikasi menampilkan nama produk sebagai teks.
