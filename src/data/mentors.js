@@ -6,23 +6,23 @@ import { isDateInCurrentWeek } from '../utils/dateUtils';
 export const mentors = [
   {
     id: 'pemula-pria', level: 'Pemula', gender: 'Laki-laki', genderLabel: 'Pria',
-    role: 'Mentor Pemula', name: '', photo: '/mentors/pemula-pria.png',
-    intro: 'Semua orang pernah canggung di hari pertama gym. Aku akan menemani langkah awalmu: pendek, terencana, dan tidak terburu-buru.',
+    role: 'WowokTzy', name: '', photo: '/mentors/pemula-pria.png',
+    intro: 'Perkenalkan saya wowoktzy, saya akan membuat badan kamu bagus seperti bagusnya tipu muslihat saya eh bagusnya badan saya maksudnya, panggil saja wokgans',
   },
   {
     id: 'pemula-wanita', level: 'Pemula', gender: 'Perempuan', genderLabel: 'Wanita',
-    role: 'Mentor Pemula', name: '', photo: '/mentors/pemula-wanita.png',
-    intro: 'Tidak ada yang menuntutmu langsung jago. Kita mulai dari rencana kecil yang bisa kamu ulang minggu depan, lalu naik pelan-pelan.',
+    role: 'Megachan', name: '', photo: '/mentors/pemula-wanita.png',
+    intro: 'Dalam mendapatkan badan yang bagus bukan hanya soal latihan yang baik, tetapi mendapatkan mentor seperti bapak saya agar dapat jadi presiden eh maksudnya mendapatkan mentor yang cocok seperti saya, panggil saja megachantwik ',
   },
   {
     id: 'menengah-pria', level: 'Menengah', gender: 'Laki-laki', genderLabel: 'Pria',
-    role: 'Mentor Menengah', name: '', photo: '/mentors/menengah-pria.png',
-    intro: 'Kamu sudah melewati tahap kenalan. Sekarang yang menentukan adalah catatan yang rapi dan kenaikan beban yang sabar.',
+    role: 'Syahronislay', name: '', photo: '/mentors/menengah-pria.png',
+    intro: 'Tidak perlu seperti saya untuk mendapatkan lakilaki gantengs eh untuk mendapatkan badan yang ganteng, tetapi dengan latihan yang teratur kamu dapat menjadi salah satu laki laki ganteng saya, panggil saja mas sharoni',
   },
   {
     id: 'menengah-wanita', level: 'Menengah', gender: 'Perempuan', genderLabel: 'Wanita',
-    role: 'Mentor Menengah', name: '', photo: '/mentors/menengah-wanita.png',
-    intro: 'Di level ini kemajuan terasa lebih lambat, dan itu normal. Aku bantu kamu membaca catatan latihan supaya tahu kapan harus menambah dan kapan harus menahan.',
+    role: 'Ijodingin', name: '', photo: '/mentors/menengah-wanita.png',
+    intro: 'Dalam mengangkat suatu alat gym, bukan hanya kekuatan yang diperlukan, tetapi juga tentang ketenangan dalam mendapatkan timing yang pas seperti saya, panggil saja tante ijo',
   },
 ];
 
@@ -35,46 +35,46 @@ export function getMentorName(mentor) {
 export const levelGuidance = {
   Pemula: {
     focus: [
-      { title: 'Kenali gym lebih dulu', body: 'Minta orientasi alat ke staf gym di hari pertama. Tahu letak dan cara pakai alat mengurangi rasa canggung.' },
-      { title: 'Mulai pendek dan terencana', body: 'Pilih dua sampai tiga gerakan sebelum datang. Sesi sekitar 20 menit sudah cukup untuk minggu pertama.' },
-      { title: 'Teknik dulu, beban belakangan', body: 'Pakai beban yang bisa kamu kontrol di seluruh gerakan. Naikkan beban setelah gerakan terasa stabil.' },
-      { title: 'Datang saat gym sepi', body: 'Jam sepi memberi ruang untuk belajar alat tanpa merasa diperhatikan. Ajak teman bila ada.' },
+      { title: 'Pemula', body: 'Baik bertanya agar tidak sesat dijalan, kata kata ini harus kamu terapkan di gym agar kamu bisa menjadi ksatria yang hebat, tidak perlu malu'},
+      { title: 'Singkat tapi terencana', body: 'Tidak perlu untuk melatih diri kamu dengan intensitas yang banyak, kamu hanya perlu konsisten dalam melewati setiap rencana latihan' },
+      { title: 'Pentingnya mengatur teknik', body: 'Kamu tidak boleh menaikkan beban kamu terlalu berat sebelum kamu benar benar memahami teknik disetiap jenis olahraganya' },
+      { title: 'Rekomendasi waktu gym', body: 'Rekomendasi aku untuk kamu adalah kamu latihan disaat semua orang tidak latihan. Bukan untuk membuat kamu tidak percaya diri, tetapi agar kamu fokus terhadap latihan kamu' },
     ],
     states: {
-      idle: 'Minggu ini belum ada sesi yang tercatat. Tidak apa-apa. Pilih satu program dari Workout Plan, jadwalkan sesi pendek, lalu datang saja.',
-      progress: 'Kamu sudah mulai dan itu bagian tersulit. Ulangi pola yang sama di sesi berikutnya sebelum menambah apa pun.',
-      done: 'Target minggu ini tercapai. Istirahat juga bagian dari program, jadi beri tubuhmu waktu pulih.',
+      idle: 'Minggu ini belum ada sesi yang tercatat. Ayo latihanlah! ingat mereka yang sedang memperjelekan badan kamu',
+      progress: 'Ayo terus berusaha dalam berproses, aku bangga padamu!',
+      done: 'Target minggu ini tercapai, well done! semangat untuk minggu selanjutnya dan berikan waktu untuk badan dan diri kamu istirahat',
     },
     replies: {
-      ringan: 'Terasa ringan berarti bebanmu masih nyaman. Pertahankan teknik, lalu tambah satu repetisi atau sedikit beban di sesi berikutnya.',
-      pas: 'Tingkat kesulitan yang pas. Ulangi minggu ini dengan pola yang sama sampai gerakan terasa otomatis.',
-      berat: 'Terasa berat, jadi kurangi beban atau jumlah set di sesi berikutnya. Kalau ada nyeri, hentikan latihan dan tanyakan ke instruktur.',
+      ringan: 'Setelah 12 kali sudah terasa enteng bagi kamu, kamu perlu menambahkan beban untuk menaikkan ritme latihan kamu',
+      pas: 'Jika masih stagnan, tidak apa apa. Latihan kamu tetap seperti sebelumnya',
+      berat: 'Aku sarankan kamu lebih banyak tidur dan mengatur pola makan kamu dengan lebih banyak memakan protein seperti ayam dan lain sebagainya, Jangan patah semangat ya!',
     },
   },
   Menengah: {
     focus: [
-      { title: 'Naik lewat repetisi dulu', body: 'Tambah satu repetisi pada beban yang sama sebelum menambah beban. Satu repetisi ekstra juga kemajuan.' },
-      { title: 'Catat beban dan repetisi', body: 'Plateau baru bisa dipastikan dari catatan empat sampai enam minggu. Tanpa catatan, kita hanya menebak.' },
-      { title: 'Sisakan 1 sampai 2 repetisi', body: 'Hentikan set saat masih ada tenaga untuk satu atau dua repetisi lagi. Teknik tetap terjaga dan pemulihan lebih mudah.' },
-      { title: 'Jadwalkan minggu ringan', body: 'Bila performa turun beberapa sesi berturut-turut, kurangi volume sekitar sepertiga sampai setengah selama satu minggu.' },
+      { title: 'Tambah repetisi', body: 'Tambah satu repetisi pada beban yang sama sebelum menambah beban' },
+      { title: 'Catat semua repetisi', body: 'Catatlah dengan baik berapa repetisi yang berhasil kamu dapatkan' },
+      { title: 'Habiskan tenaga disetiap repetisi', body: 'Dalam membentuk otot, bukan hanya kekuatan yang kamu pikirkan, tetapi juga mental kamu' },
+      { title: 'Terasa berat', body: 'Turunin repetisi menjadi repetisi sebelumnya bila kamu merasa tidak kuat saat mengangkat beban yang sudah kamu tingkatkan repetisinya' },
     ],
     states: {
-      idle: 'Belum ada sesi tercatat minggu ini. Tentukan hari dan program sekarang, supaya catatan minggu ini tidak kosong.',
-      progress: 'Sesi berjalan. Bandingkan beban dan repetisi hari ini dengan sesi terakhir untuk gerakan yang sama, lalu putuskan: tambah, tahan, atau turunkan.',
-      done: 'Target minggu ini tercapai. Gunakan sisa minggu untuk tidur cukup dan makan teratur, karena di sanalah otot beradaptasi.',
+      idle: 'Jangan merasa selama ini latihan kamu tidak ada peningkatan, karena kamu sudah mau latihan aja itu salah satu peningkatan di diri kamu',
+      progress: 'Teruslah berusaha, aku bangga padamu!',
+      done: 'Target minggu ini sudah tercapai, selamat!',
     },
     replies: {
-      ringan: 'Terlalu ringan untuk level menengah. Tambah satu repetisi di tiap set, atau naikkan beban sedikit bila rentang repetisi sudah tercapai.',
-      pas: 'Beban sudah tepat. Pertahankan, catat hasilnya, dan cari tambahan satu repetisi di sesi berikutnya.',
-      berat: 'Kalau terasa berat tiga sesi berturut-turut, cek tidur dan asupan makan dulu. Setelah itu pertimbangkan minggu ringan dengan volume dikurangi.',
+      ringan: 'Cobalah menaikkan beban dengan repetisi yang sama, itu membuat proggres kamu berguna',
+      pas: 'Beban sudah tepat. Cobalah untuk menaikkan repetisinya',
+      berat: 'Kalau terasa berat tiga sesi berturut-turut, aku rasa kamu ga ngejaga pola istirahat dan makanan kamu, tidurlah yang cukup jangan kurang tidur untuk hal yang tidak berguna',
     },
   },
 };
 
 export const feelOptions = [
-  { value: 'ringan', label: 'Ringan', detail: 'Masih banyak tenaga tersisa' },
-  { value: 'pas', label: 'Pas', detail: 'Menantang tapi terkendali' },
-  { value: 'berat', label: 'Berat', detail: 'Hampir tidak sanggup menyelesaikan' },
+  { value: 'ringan', label: 'Ringan', detail: 'Mengangkat beban sudah seperti mengangkat pensil' },
+  { value: 'pas', label: 'Pas', detail: '12 kali masih tidak ringan' },
+  { value: 'berat', label: 'Berat', detail: 'Mengangkat beban sudah seperti mengangkat dosa' },
 ];
 
 export function getMentorFor(profile = {}) {
